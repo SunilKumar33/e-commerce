@@ -1,0 +1,37 @@
+.wishlist,
+.cart,
+.profile {
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  color: #000000 !important;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile_card {
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  height: auto;
+  background: #fff;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sign_in {
+  border: 1px solid #3466e8;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+  color: #3466e8;
+  background: #ffffff;
+  width: 100%;
+}

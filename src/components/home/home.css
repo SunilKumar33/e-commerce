@@ -1,0 +1,278 @@
+/* Category Section */
+.category_section {
+  background: #f8fafb;
+  padding: 3% 5%;
+  margin-top: 79px;
+}
+
+.category_txt {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 75px;
+  color: #242424;
+  position: relative;
+}
+
+.category_txt::after {
+  background-color: #25bc74;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 70px;
+}
+
+.category_card {
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0px 6.24262px 39.0164px rgba(0, 0, 0, 0.06);
+  border-radius: 10px !important;
+}
+
+.card-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.card-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #525454;
+}
+
+.category_card:hover {
+  background: #25bc75;
+}
+
+.category_card:hover .card-title,
+.category_card:hover .card-text {
+  color: #ffffff;
+}
+
+.btn_view_all {
+  background: #2874f0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.choose_us_txt {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 56px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #020202;
+}
+
+.choose_us_card {
+  background: #f3f4f6;
+  padding: 40px 16px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.choose_us_icon {
+  font-size: 72px !important;
+}
+
+.choose_us_card_head_txt {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.choose_us_card_sub_txt {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #525454;
+}
+
+.footer {
+  background-color: #fff;
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footerLogo {
+  width: 150px;
+}
+
+.footerLogo img {
+  width: 100%;
+  height: 80px;
+}
+
+ul.socialIcons {
+  font-size: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.socialIcons li {
+  display: inline-block;
+}
+
+ul.socialIcons li a {
+  color: #000;
+}
+
+ul.socialIcons li + li {
+  margin-left: 20px;
+}
+
+.css-vubbuv {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.contact_info {
+  color: #000;
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 0;
+  padding-bottom: 12px;
+  position: relative;
+  text-transform: none;
+}
+
+.contact_info:after {
+  background-color: #fdc315;
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 40px;
+}
+
+ul.listContactInfo {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.listContactInfo li {
+  border-top: 1px solid #cbcbcb;
+  margin-top: 10px;
+  padding-left: 33px;
+  padding-top: 18px;
+  position: relative;
+}
+
+ul.listContactInfo li:first-child {
+  border-top: none;
+}
+.land_li_icons {
+  color: #fdc315;
+  left: 0;
+  position: absolute;
+  top: 23px;
+}
+
+ul.listContactInfo li a {
+  color: #000;
+  font-family: "Roboto";
+  font-size: 15px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.boxCopyright {
+  background-color: #ececec;
+  color: #000;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 18px 0;
+  text-align: center;
+}
+
+.login_bg {
+  background-color: #f4f4f4;
+}
+
+.login {
+  height: 100vh;
+  border: none;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login_card {
+  padding: 30px;
+  border-radius: 19px;
+  background-color: rgb(255, 255, 255);
+}
+
+.label_txt,
+.login_txt {
+  font-style: normal;
+  text-align: center;
+  color: #000;
+}
+
+.login_txt {
+  font-family: "Roboto";
+  font-size: 36px;
+  line-height: 44px;
+  text-transform: capitalize;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .category_txt {
+    font-size: 22px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
