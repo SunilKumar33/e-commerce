@@ -3,15 +3,15 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-const Bag = ({ data, removeCart, addWishlist, bagTotal, setBagTotal }) => {
+const Bag = ({
+  data,
+  removeCart,
+  addWishlist,
+  incrementCost,
+  decrementCost,
+}) => {
   const [quantityValues, setQuantityValues] = useState(data.qty);
   let totalCost = data.price * quantityValues;
-
-  let arr = [];
-  console.log("arr", arr.push(totalCost));
-  // setWishData((prevState) => [...prevState, productDetails]);
-  console.log("totalCost", totalCost);
-  // setBagTotal((prevState) => [...prevState, totalCost]);
 
   return (
     <div className="card_section row">
@@ -31,6 +31,7 @@ const Bag = ({ data, removeCart, addWishlist, bagTotal, setBagTotal }) => {
                 quantityValues <= 1 ? "values_disable" : "increment_values"
               }
               onClick={() => {
+                decrementCost(data);
                 setQuantityValues(quantityValues - 1);
               }}
             >
@@ -40,6 +41,7 @@ const Bag = ({ data, removeCart, addWishlist, bagTotal, setBagTotal }) => {
             <div
               className="increment_values"
               onClick={() => {
+                incrementCost(data);
                 setQuantityValues(quantityValues + 1);
               }}
             >

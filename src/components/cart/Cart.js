@@ -90,12 +90,36 @@ const Cart = () => {
     dispatch(setWishListData(wishData));
   }, [wishData]);
 
-  const [bagTotal, setBagTotal] = useState([]);
+  let amountToPay = 0;
+  for (let i = 0; i < productDetails.length; i++) {
+    amountToPay += productDetails[i].price * productDetails[i].qty;
+  }
 
-  const newArray = [];
+  // to increment the values of cost
+  const incrementCost = (values) => {
+    const upd_obj = productDetails.map((obj) => {
+      if (obj.id === values.id) {
+        return { ...obj, qty: values.qty + 1 };
+      }
+      return obj;
+    });
+    setProductDetails(upd_obj);
+  };
 
-  console.log("bagTotal", bagTotal);
-  console.log("newArray", newArray);
+  // to decrement the values of cost
+  const decrementCost = (values) => {
+    const upd_obj = productDetails.map((obj) => {
+      if (obj.id === values.id) {
+        return { ...obj, qty: values.qty - 1 };
+      }
+      return obj;
+    });
+    setProductDetails(upd_obj);
+  };
+
+  useEffect(() => {
+    dispatch(setCartData(productDetails));
+  }, [productDetails]);
 
   return (
     <>
@@ -175,20 +199,15 @@ const Cart = () => {
                                 data={data}
                                 addWishlist={addWishlist}
                                 removeCart={removeCart}
-                                bagTotal={bagTotal}
-                                setBagTotal={setBagTotal}
+                                incrementCost={incrementCost}
+                                decrementCost={decrementCost}
                               />
                             </div>
                           );
                         })
                       ) : (
                         <div className="d-flex align-items-center w-100 py-5">
-                          <strong>Loading...</strong>
-                          <div
-                            className="spinner-border ms-auto"
-                            role="status"
-                            aria-hidden="true"
-                          ></div>
+                          <h3>No Items in Cart</h3>
                         </div>
                       )}
                     </div>
@@ -196,6 +215,7 @@ const Cart = () => {
                 </div>
                 <div className="col-md-3">
                   <OrderDetails
+                    amountToPay={amountToPay}
                     stepperSection={stepperSection}
                     setStepperSection={setStepperSection}
                   />
@@ -205,13 +225,17 @@ const Cart = () => {
           ) : stepperSection === "Address" ? (
             <div>
               <Address
+                amountToPay={amountToPay}
                 stepperSection={stepperSection}
                 setStepperSection={setStepperSection}
               />
             </div>
           ) : stepperSection === "Payment" ? (
             <div>
-              <Payment setStepperSection={setStepperSection} />
+              <Payment
+                amountToPay={amountToPay}
+                setStepperSection={setStepperSection}
+              />
             </div>
           ) : (
             ""

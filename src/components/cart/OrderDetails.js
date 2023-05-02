@@ -1,24 +1,39 @@
 import React from "react";
 
-const OrderDetails = ({ stepperSection, setStepperSection }) => {
+const OrderDetails = ({ amountToPay, stepperSection, setStepperSection }) => {
   return (
     <div>
       <div className="order-summary-container">
         <h3 className="card_header">Order Details</h3>
         <div className="price_summary">
           <span className="label">Bag total</span>
-          <span className="price_value">2000</span>
+          <span className="price_value">
+            {Intl.NumberFormat("en-IN", {
+              style: "currency",
+              currency: "INR",
+            }).format(amountToPay)}
+          </span>
         </div>
         <div className="price_summary">
           <span className="label">Delivery Free</span>
           <div className="d-flex price_value" style={{ gap: "5px" }}>
             <span className="free_txt">Free</span>
-            <span className="strike_rate">99</span>
+            <span className="strike_rate">
+              {Intl.NumberFormat("en-IN", {
+                style: "currency",
+                currency: "INR",
+              }).format(99)}
+            </span>
           </div>
         </div>
         <div className="price_summary">
           <span className="label bold_font">Order Total</span>
-          <span className="price_value bold_font">2000</span>
+          <span className="price_value bold_font">
+            {Intl.NumberFormat("en-IN", {
+              style: "currency",
+              currency: "INR",
+            }).format(amountToPay)}
+          </span>
         </div>
       </div>
       {stepperSection === "Bag" ? (

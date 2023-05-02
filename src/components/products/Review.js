@@ -13,7 +13,7 @@ const Review = () => {
           console.log("values", values);
         }}
       >
-        {({ errors, touched, values }) => (
+        {({ errors, touched }) => (
           <Form>
             <div className="row">
               <div className="col-6">

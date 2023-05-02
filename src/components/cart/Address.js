@@ -14,7 +14,7 @@ import {
 import OrderDetails from "./OrderDetails";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
-const Address = ({ stepperSection, setStepperSection }) => {
+const Address = ({ amountToPay, stepperSection, setStepperSection }) => {
   return (
     <div className="product_details_section">
       <div>
@@ -247,6 +247,7 @@ const Address = ({ stepperSection, setStepperSection }) => {
         </div>
         <div className="col-md-3">
           <OrderDetails
+            amountToPay={amountToPay}
             stepperSection={stepperSection}
             setStepperSection={setStepperSection}
           />
