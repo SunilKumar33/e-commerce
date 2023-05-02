@@ -23,8 +23,6 @@ export const dataSlice = createSlice({
     },
     setCartData: (state, action) => {
       state.cartData = action.payload;
-      console.log("state", state);
-      console.log("action", action);
     },
     setUserLogged: (state, action) => {
       state.userLogged = action.payload;
