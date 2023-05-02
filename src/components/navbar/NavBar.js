@@ -13,6 +13,7 @@ import {
   setProductId,
   setWishListData,
   setUserLogged,
+  setCartData,
 } from "../../features/Data/dataSlice";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -30,6 +31,7 @@ const NavBar = () => {
     dispatch(setProductId(""));
     dispatch(setWishListData([]));
     dispatch(setUserLogged(false));
+    dispatch(setCartData([]));
     toast.success("User Logged Out Successfully", {
       position: "top-right",
       autoClose: 5000,

@@ -9,13 +9,21 @@ import {
   validateUPI,
   validateYear,
 } from "../helper";
+import { useDispatch } from "react-redux";
+import {
+  setCartData,
+  setCategoryData,
+  setProductId,
+} from "../../features/Data/dataSlice";
+import OrderDetails from "./OrderDetails";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 toast.configure();
 
-const Payment = ({ setStepperSection }) => {
+const Payment = ({ amountToPay, setStepperSection }) => {
   const [paymentMode, setPaymentMode] = useState("card");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const orderPlaced = () => {
@@ -29,6 +37,9 @@ const Payment = ({ setStepperSection }) => {
       progress: undefined,
       theme: "dark",
     });
+    dispatch(setCartData([]));
+    dispatch(setCategoryData(""));
+    dispatch(setProductId(""));
     navigate("/");
   };
 
@@ -365,7 +376,7 @@ const Payment = ({ setStepperSection }) => {
                                       type="submit"
                                       className="btn_place_order"
                                     >
-                                      PAY ₹2400.00 SECURELY
+                                      PLACE ORDER
                                     </button>
                                   </div>
                                   <div className="tnc_text">
@@ -412,24 +423,7 @@ const Payment = ({ setStepperSection }) => {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="order-summary-container">
-            <h3 className="card_header">Order Details</h3>
-            <div className="price_summary">
-              <span className="label">Bag total</span>
-              <span className="price_value">2000</span>
-            </div>
-            <div className="price_summary">
-              <span className="label">Delivery Free</span>
-              <div className="d-flex price_value" style={{ gap: "5px" }}>
-                <span className="free_txt">Free</span>
-                <span className="strike_rate">99</span>
-              </div>
-            </div>
-            <div className="price_summary">
-              <span className="label bold_font">Order Total</span>
-              <span className="price_value bold_font">2000</span>
-            </div>
-          </div>
+          <OrderDetails amountToPay={amountToPay} />
         </div>
       </div>
     </div>
