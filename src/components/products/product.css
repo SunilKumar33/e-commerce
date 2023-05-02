@@ -1,0 +1,260 @@
+.product_section {
+  background: #f8fafb;
+  padding: 3% 5%;
+  margin-top: 79px;
+}
+
+.product_card {
+  cursor: pointer;
+  background: #ffffff;
+  border: 0.620585px solid #c6c6c6;
+  box-shadow: 0px 6.24262px 39.0164px rgba(0, 0, 0, 0.06);
+  border-radius: 2px !important;
+}
+
+.product_card:hover {
+  border: none;
+}
+
+.product_card:hover .product_content {
+  background: #d9dddc;
+  border-radius: 0px;
+}
+
+.prod_title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.rating {
+  color: #ffffff;
+  padding: 2px 4px 2px 6px;
+  border-radius: 3px;
+  vertical-align: middle;
+  background-color: #388e3c;
+}
+
+.product_price,
+.rating {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.product_price {
+  color: #212121;
+}
+
+.review_count {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 22px;
+  color: #878787;
+}
+
+/* Product Details */
+.product_details_section {
+  background: #ffffff;
+  padding: 3% 5%;
+}
+
+.product_description {
+  background: #f8fafb;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.product_details_title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 58px;
+  color: #242424;
+}
+
+.details_rating_count {
+  padding: 8px;
+  border: 1px solid #eaeaec;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.divider {
+  color: #e2e2e2;
+}
+
+.details_desc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #525454;
+}
+
+.price_txt {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #a0a0a0;
+  text-transform: uppercase;
+}
+
+.details_price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 51px;
+  color: #25bc74;
+}
+
+.increment_values,
+.values_disable {
+  background: #e9e9e9;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.increment_values:hover {
+  background: #25bc74;
+}
+
+.values_disable {
+  pointer-events: none;
+}
+
+.quantity_value {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18.7279px;
+  line-height: 25px;
+  color: #242424;
+}
+
+.btn_add_to_bag,
+.btn_wishlist {
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  border: none;
+  padding: 15px;
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn_add_to_bag {
+  background: #25bc75;
+  color: #ffffff;
+}
+
+.btn_wishlist {
+  color: #212121;
+}
+
+.input_label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.input_field {
+  background: #ffffff;
+  border: 0.780328px solid #a0a0a0;
+  border-radius: 5px;
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #a0a0a0;
+  padding: 15px;
+  width: 100%;
+  margin: 15px 0px;
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  display: none;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #25bc74;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #25bc74;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #25bc74;
+}
+
+.btn_review {
+  background: #25bc75;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 25px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  padding-bottom: 5px;
+}
+
+.prom_txt {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #011108;
+  text-align: center;
+}
